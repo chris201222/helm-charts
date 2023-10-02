@@ -3,7 +3,7 @@ entries:
   nginx-demo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-22T11:17:25.974998601+08:00"
+    created: "2023-10-02T14:35:42.003362653+08:00"
     description: A Helm chart for Kubernetes
     digest: a9af56478ada7416aae4003c6c47c091f4e9ab2168282a907b6cd8897d117e24
     name: nginx-demo
@@ -13,7 +13,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-22T11:17:25.97469136+08:00"
+    created: "2023-10-02T14:35:42.003105049+08:00"
     description: A Helm chart for Kubernetes
     digest: f367a85402eb5646e7097cc3601e6aa0a201cbc7a577bbfd24290fd29db462ea
     name: nginx-demo
@@ -21,9 +21,20 @@ entries:
     urls:
     - https://chris201222.github.io/helm-charts/nginx-demo-0.1.0.tgz
     version: 0.1.0
+  olea-platform:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-10-02T14:35:42.004133148+08:00"
+    description: A Helm chart for Kubernetes
+    digest: bbf9746189fc38bbf99f41e7329a0dd9925a0d70c38307f65b5e3c104c2931f1
+    name: olea-platform
+    type: application
+    urls:
+    - https://chris201222.github.io/helm-charts/olea-platform-0.1.0.tgz
+    version: 0.1.0
   tyk-pro:
   - apiVersion: v1
-    created: "2023-03-22T11:17:25.976471754+08:00"
+    created: "2023-10-02T14:35:42.007681282+08:00"
     description: This chart deploys full Tyk platform. Tyk Gateway is a fully open
       source Enterprise API Gateway, supporting REST, GraphQL, TCP and gRPC protocols.
       Tyk Gateway is provided ‘Batteries-included’, with no feature lockout. It enables
@@ -48,4 +59,4 @@ entries:
     urls:
     - https://chris201222.github.io/helm-charts/tyk-pro-0.13.2.tgz
     version: 0.13.2
-generated: "2023-03-22T11:17:25.972777801+08:00"
+generated: "2023-10-02T14:35:42.002195423+08:00"
