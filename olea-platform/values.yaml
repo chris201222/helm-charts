@@ -1,0 +1,291 @@
+# Default values for olea-platform.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+nameOverride: ""
+fullnameOverride: ""
+
+commonConfig:
+  environment: dev
+  # useTimeStampLabel: to control whether add timestamp as label to deployment
+  useTimestampAsLabel: true
+  repository: 855703743734.dkr.ecr.ap-southeast-1.amazonaws.com/olea
+  imagePullPolicy: Always
+  imagePullSecrets: []
+
+deploymentList:
+  ##### Example #####
+  # name: SERVICE_NAME                                           # is used to set service name for service      (Required)
+  # imageTag: "IMAGE_TAG"                                        # is used to set image tag for service         (Required)
+  # replicas: REPLICAS_NUM                                       # is used to set replicas for service          (Optional default 1)
+  # extraEnvs:                                                   # is used to set environment variables for service (Optional)
+  #   - name: parameter
+  #     value: -Xms1024M -Xmx1024M -Ddubbo.reference.check=false
+  # configMapName: olea-configmap                                # is used to set configmap name for service
+  # cpuAllocated: 1000m                                          # is used to set cpu limits, requests for service          (Optional default 1000m)
+  # memoryAllocated: 1024Mi                                      # is used to set memory limits, requests for service       (Optional default 1024Mi)
+
+  settlementService:
+    name: olea-settlement-service
+    imageTag: "1.36.0"
+  settlementFront:
+    name: olea-settlement-front
+    imageTag: "1.36.0"
+    cpuAllocated: 200m
+    memoryAllocated: 256Mi
+  paymentService:
+    name: olea-payment-service
+    imageTag: "1.36.0"
+
+  accountingWeb:
+    name: olea-accounting-web
+    imageTag: "1.34.0-jdk17"
+    extraEnvs:
+      - name: parameter
+        value: -Xms1024M -Xmx1024M -Ddubbo.reference.check=false
+
+  # assetBookingService:
+  #   isBackendService: true
+  #   name: olea-asset-booking-service
+  #   imageTag: "37.0.0"
+  # assetBookingWeb:
+  #   isBackendService: true
+  #   name: olea-asset-booking-web
+  #   imageTag: "37.0.0"
+  # assetBookingFront:
+  #   isBackendService: false
+  #   name: olea-asset-booking-front
+  #   imageTag: "37.0.0"
+
+  # assetService:
+  #   isBackendService: true
+  #   name: olea-asset-service
+  #   imageTag: "1.36.0"
+  # assetWeb:
+  #   isBackendService: true
+  #   name: olea-asset-web
+  #   imageTag: "1.36.0"
+  # innerPcFront:
+  #   isFrontendService: true
+  #   name: olea-inner-pc-front
+  #   imageTag: "1.36.0"
+
+  # autoCheckService:
+  #   isBackendService: true
+  #   name: olea-autocheck-service
+  #   imageTag: "1.36.0"
+  # autoCheckWeb:
+  #   isBackendService: true
+  #   name: olea-autocheck-web
+  #   imageTag: "1.36.0"
+
+  # beeInsightFront:
+  #   isFrontendService: true
+  #   name: olea-bee-insight-front
+  #   imageTag: "1.32.0"
+
+  # beeInsightWeb:
+  #   isBackendService: true
+  #   name: olea-bee-insight-web
+  #   imageTag: "1.22.0"
+
+  # buyerWeb:
+  #   isBackendService: true
+  #   name: olea-buyer-web
+  #   imageTag: "37.0.0"
+
+  # contractService:
+  #   isBackendService: true
+  #   name: olea-contract-service
+  #   imageTag: "1.34.0-jdk17"
+  # contractWeb:
+  #   isBackendService: true
+  #   name: olea-contract-web
+  #   imageTag: "1.34.0-jdk17"
+
+  # custService:
+  #   isBackendService: true
+  #   name: olea-cust-service
+  #   imageTag: "37.0.0"
+  # custWeb:
+  #   isBackendService: true
+  #   name: olea-cust-web
+  #   imageTag: "37.0.0"
+
+  # dataAnalysisService:
+  #   isBackendService: true
+  #   name: olea-data-analysis-service
+  #   imageTag: "1.35.2"
+  # dataAnalysisWeb:
+  #   isBackendService: true
+  #   name: olea-data-analysis-web
+  #   imageTag: "1.35.0"
+
+  # investorFront:
+  #   isFrontendService: true
+  #   name: olea-investor-front
+  #   imageTag: "1.32.0"
+  # investorWeb:
+  #   isBackendService: true
+  #   name: olea-investor-web
+  #   imageTag: "1.34.0-jdk17"
+
+  # jobCenterWeb:
+  #   isBackendService: true
+  #   name: olea-job-center-web
+  #   imageTag: "1.29.0"
+
+  # mediaService:
+  #   isBackendService: true
+  #   name: olea-media-service
+  #   imageTag: "1.35.0"
+  # mediaWeb:
+  #   isBackendService: true
+  #   name: olea-media-web
+  #   imageTag: "1.35.0"
+
+  # messageService:
+  #   isBackendService: true
+  #   name: olea-message-service
+  #   imageTag: "1.34.0-jdk17"
+  # messageWeb:
+  #   isBackendService: true
+  #   name: olea-message-web
+  #   imageTag: "1.34.0-jdk17"
+
+  # pubService:
+  #   isBackendService: true
+  #   name: olea-pub-service
+  #   imageTag: "37.0.0"
+  # pubWeb:
+  #   isBackendService: true
+  #   name: olea-pub-web
+  #   imageTag: "37.0.0"
+
+  # ruleCheckService:
+  #   isBackendService: true
+  #   name: olea-rulecheck-service
+  #   imageTag: "1.36.0"
+  # ruleCheckWeb:
+  #   isBackendService: true
+  #   name: olea-rulecheck-web
+  #   imageTag: "1.36.0"
+
+  # scbService:
+  #   isBackendService: true
+  #   name: olea-scb-service
+  #   imageTag: "1.35.0"
+  # scbWeb:
+  #   isBackendService: true
+  #   name: olea-scb-web
+  #   imageTag: "1.35.0"
+
+  # ssoService:
+  #   backendService: true
+  #   name: olea-sso-service
+  #   imageTag: "1.35.0"
+  # ssoWeb:
+  #   backendService: true
+  #   name: olea-sso-web
+  #   imageTag: "1.35.0"
+
+  # supplierWeb:
+  #   isBackendService: true
+  #   name: olea-supplier-web
+  #   imageTag: "37.0.0"
+  # supplierPcFront:
+  #   isFrontendService: true
+  #   name: olea-supplierpc-front
+  #   imageTag: "37.0.0"
+
+  # sysFront:
+  #   isFrontendService: true
+  #   name: olea-sys-front
+  #   imageTag: "1.34.1"
+  # sysWeb:
+  #   isBackendService: true
+  #   name: olea-sys-web
+  #   imageTag: "1.34.0-jdk17"
+  # sysService:
+  #   isBackendService: true
+  #   name: olea-sys-service
+  #   imageTag: "1.34.0-jdk17"
+
+  # userDefinedService:
+  #   isBackendService: true
+  #   name: olea-user-defined-service
+  #   imageTag: "37.0.0"
+
+  # userDefineWeb:
+  #   isBackendService: true
+  #   name: olea-user-defined-web
+  #   imageTag: "37.0.0"
+
+  # workflowService:
+  #   isBackendService: true
+  #   name: olea-workflow-service
+  #   imageTag: "1.35.0"
+  # workflowWeb:
+  #   isBackendService: true
+  #   name: olea-workflow-web
+  #   imageTag: "1.35.0"
+
+  # workOrderFront:
+  #   isFrontendService: true
+  #   name: olea-work-order-front
+  #   imageTag: "1.32.0"
+  # workOrderWeb:
+  #   isBackendService: true
+  #   name: olea-work-order-web
+  #   imageTag: "1.36.0"
+  # workOrderService:
+  #   isBackendService: true
+  #   name: olea-work-order-service
+  #   imageTag: "1.36.0"
+
+strategy:
+  Rollout:
+    blueGreen:
+      activeMetadata:
+        labels:
+          role: active
+      previewMetadata:
+        labels:
+          role: preview
+      autoPromotionEnabled: false
+      scaleDownDelaySeconds: 60
+
+service:
+  type: ClusterIP
+  port: 80
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "olea-sys-sa"
+
+podAnnotations: {}
+
+podSecurityContext:
+  {}
+  # fsGroup: 2000
+
+securityContext:
+  {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80

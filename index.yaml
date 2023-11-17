@@ -1,82 +1,14 @@
 apiVersion: v1
 entries:
-  nginx-demo:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-11-18T07:45:34.068599728+08:00"
-    description: A Helm chart for Kubernetes
-    digest: a9af56478ada7416aae4003c6c47c091f4e9ab2168282a907b6cd8897d117e24
-    name: nginx-demo
-    type: application
-    urls:
-    - https://chris201222.github.io/helm-charts/nginx-demo-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-11-18T07:45:34.068328045+08:00"
-    description: A Helm chart for Kubernetes
-    digest: f367a85402eb5646e7097cc3601e6aa0a201cbc7a577bbfd24290fd29db462ea
-    name: nginx-demo
-    type: application
-    urls:
-    - https://chris201222.github.io/helm-charts/nginx-demo-0.1.0.tgz
-    version: 0.1.0
   olea-platform:
   - apiVersion: v2
     appVersion: 1.38.0
-    created: "2023-11-18T07:45:34.070613764+08:00"
+    created: "2023-11-18T07:53:16.234630875+08:00"
     description: A Helm chart for Kubernetes
-    digest: f2fc4e1b0dc4b077d125cbb3061addc784768ee898ecec0e05e0807ac5830c73
+    digest: 7fc71ece9e28d485374af8ddc00d02d97a9b44f538918889232e08ca91256397
     name: olea-platform
     type: application
     urls:
     - https://chris201222.github.io/helm-charts/olea-platform-0.3.0.tgz
     version: 0.3.0
-  - apiVersion: v2
-    appVersion: 1.38.0
-    created: "2023-11-18T07:45:34.070296262+08:00"
-    description: A Helm chart for Kubernetes
-    digest: fa722d4f146fa8f5e0db464350260584edc45203d80b8f5f14d4b858be8dd66b
-    name: olea-platform
-    type: application
-    urls:
-    - https://chris201222.github.io/helm-charts/olea-platform-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.38.0
-    created: "2023-11-18T07:45:34.069911219+08:00"
-    description: A Helm chart for Kubernetes
-    digest: f7d12fec1089a5f9116b0bac3a6571f99b348e95510e8e49474f6bd3b001e240
-    name: olea-platform
-    type: application
-    urls:
-    - https://chris201222.github.io/helm-charts/olea-platform-0.1.0.tgz
-    version: 0.1.0
-  tyk-pro:
-  - apiVersion: v1
-    created: "2023-11-18T07:45:34.071657382+08:00"
-    description: This chart deploys full Tyk platform. Tyk Gateway is a fully open
-      source Enterprise API Gateway, supporting REST, GraphQL, TCP and gRPC protocols.
-      Tyk Gateway is provided ‘Batteries-included’, with no feature lockout. It enables
-      organisations and businesses around the world to protect, secure, and process
-      APIs and well as review and audit the consumed apis.
-    digest: 0b7d8a882866be9b70c44aa8c54e26609dd5e2e890c720d0b721aea384917605
-    home: https://tyk.io/
-    icon: https://tyk.io/wp-content/uploads/2021/07/tyk_logo_no_bg.png
-    keywords:
-    - api gateway
-    - reverse proxy
-    - api management
-    - ingress
-    - ingress controller
-    - open source gateway
-    - edge gateway
-    name: tyk-pro
-    sources:
-    - https://github.com/TykTechnologies/tyk-helm-chart
-    - https://tyk.io/
-    - https://community.tyk.io/
-    urls:
-    - https://chris201222.github.io/helm-charts/tyk-pro-0.13.2.tgz
-    version: 0.13.2
-generated: "2023-11-18T07:45:34.06788139+08:00"
+generated: "2023-11-18T07:53:16.234097728+08:00"

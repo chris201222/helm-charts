@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "olea-platform.fullname" . }}-test-connection"
+  labels:
+    {{- include "olea-platform.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['https://agw-web.qa.scvolea.com']
+  restartPolicy: Never
