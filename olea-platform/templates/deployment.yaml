@@ -37,10 +37,10 @@ spec:
           imagePullPolicy: {{ $top.Values.commonConfig.imagePullPolicy | default "IfNotPresent" }}
           resources:
             limits:
-              cpu: {{ $deployment.cpuAllocated | default "1"}}
+              cpu: {{ $deployment.cpuAllocated | default "300m"}}
               memory: {{ $deployment.cpuAllocated  | default "1024Mi"}}
             requests:
-              cpu: {{ $deployment.cpuAllocated | default "1" }}
+              cpu: {{ $deployment.cpuAllocated | default "300m" }}
               memory: {{ $deployment.cpuAllocated | default "1024Mi"}}
           ports:
             - name: http
