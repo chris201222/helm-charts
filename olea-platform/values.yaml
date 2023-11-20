@@ -26,6 +26,18 @@ deploymentList:
   # cpuAllocated: 250m                                          # is used to set cpu limits, requests for service          (Optional default 250m)
   # memoryAllocated: 1024Mi                                      # is used to set memory limits, requests for service       (Optional default 1024Mi)
 
+  nginxDemo:
+    name: nginx
+    imageTag: "1.25.3"
+    # configMapName: olea
+    cpuAllocated: "0.25"
+    memoryAllocated: 0.5Gi
+    containerPort: 80
+    repository: docker.io
+    # extraEnvs:
+    #   - name: parameter
+    #     value: -Xms1024M -Xmx1024M -Ddubbo.reference.check=false
+
 strategy:
   Rollout:
     blueGreen:

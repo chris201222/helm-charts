@@ -38,10 +38,10 @@ spec:
           resources:
             limits:
               cpu: {{ $deployment.cpuAllocated | default "0.25"}}
-              memory: {{ $deployment.cpuAllocated  | default "1024Mi"}}
+              memory: {{ $deployment.memoryAllocated | default "1024Mi"}}
             requests:
               cpu: {{ $deployment.cpuAllocated | default "0.25" }}
-              memory: {{ $deployment.cpuAllocated | default "1024Mi"}}
+              memory: {{ $deployment.memoryAllocated | default "1024Mi"}}
           ports:
             - name: http
               containerPort: {{ $deployment.containerPort | default 8080 }}
