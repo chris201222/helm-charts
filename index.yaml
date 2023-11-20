@@ -3,9 +3,19 @@ entries:
   olea-platform:
   - apiVersion: v2
     appVersion: 38.0.2
-    created: "2023-11-20T09:34:58.202520129+08:00"
+    created: "2023-11-20T09:46:09.341687898+08:00"
     description: A Helm chart for Kubernetes
-    digest: 664f27845bda6e98c8cfcd0d2e5d7fb10b805d186696e1a9e9c601451f907f6a
+    digest: e3c2d13dd116e54ac7310e620009cd05bf6e79a9c227bdd78055cf07cb21f472
+    name: olea-platform
+    type: application
+    urls:
+    - https://chris201222.github.io/helm-charts/olea-platform-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
+    appVersion: 38.0.2
+    created: "2023-11-20T09:46:09.341447724+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 8a0755cb2e8a2e278009bd2b4d5754524121c3b38ec2262a84c60c33b188de6c
     name: olea-platform
     type: application
     urls:
@@ -13,7 +23,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 38.0.1
-    created: "2023-11-20T09:34:58.200132737+08:00"
+    created: "2023-11-20T09:46:09.34120661+08:00"
     description: A Helm chart for Kubernetes
     digest: d08ecf8de52d79597eaeb75320db4f6a2a6af4fd66948ebca1f32c66c19a8fed
     name: olea-platform
@@ -23,7 +33,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 38.0.0
-    created: "2023-11-20T09:34:58.199676264+08:00"
+    created: "2023-11-20T09:46:09.340774693+08:00"
     description: A Helm chart for Kubernetes
     digest: d47aa4f98fd9bd3616cd65d9808ba7d8cf75318dc788b9f1f5583f0d55a8caae
     name: olea-platform
@@ -33,7 +43,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 1.39.0
-    created: "2023-11-20T09:34:58.199217434+08:00"
+    created: "2023-11-20T09:46:09.339565784+08:00"
     description: A Helm chart for Kubernetes
     digest: abaf0a839f132e8c613319f2812d79fb9c0aa3f34942a690aaea82ce5a6de56a
     name: olea-platform
@@ -43,7 +53,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.38.0
-    created: "2023-11-20T09:34:58.198604635+08:00"
+    created: "2023-11-20T09:46:09.339288051+08:00"
     description: A Helm chart for Kubernetes
     digest: 7fc71ece9e28d485374af8ddc00d02d97a9b44f538918889232e08ca91256397
     name: olea-platform
@@ -51,4 +61,4 @@ entries:
     urls:
     - https://chris201222.github.io/helm-charts/olea-platform-0.3.0.tgz
     version: 0.3.0
-generated: "2023-11-20T09:34:58.196373643+08:00"
+generated: "2023-11-20T09:46:09.33887886+08:00"
