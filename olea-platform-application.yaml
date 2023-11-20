@@ -1,24 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: olea-platform
+  name: olea-platform-demo
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: llsdev
-  source:
-    repoURL: "https://chris201222.github.io/helm-charts/"
-    targetRevision: 0.1.0
-    helm:
-      parameters:
-        - name: deploymentList.ssoService.imageTag
-          value: 1.37.0
-        - name: deploymentList.assetService.imageTag
-          value: 37.0.0
-        - name: deploymentList.assetWeb.imageTag
-          value: 37.0.0
-    chart: olea-platform
+  project: default
   destination:
+    name: ""
+    namespace: demo
     server: "https://kubernetes.default.svc"
-    namespace: dev
+  sources:
+    - repoURL: "https://chris201222.github.io/helm-charts/"
+      targetRevision: 0.8.0
+      chart: olea-platform
+      helm:
+        valueFiles:
+          - $values/qa/values.yaml
+          - $values/qa/infra-values.yaml
+    - repoURL: "git@github.com:chris201222/platform-config.git"
+      targetRevision: HEAD
+      ref: values

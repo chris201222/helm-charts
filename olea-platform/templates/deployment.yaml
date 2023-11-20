@@ -33,7 +33,7 @@ spec:
                 name: {{ $deployment.configMapName }}
         {{- end }}
           name: {{ $deployment.name }}
-          image: "{{ $top.Values.commonConfig.repository}}/{{$deployment.name}}:{{$deployment.imageTag}}"
+          image: "{{ $deployment.repository | default $top.Values.commonConfig.repository }}/{{$deployment.name}}:{{$deployment.imageTag}}"
           imagePullPolicy: {{ $top.Values.commonConfig.imagePullPolicy | default "IfNotPresent" }}
           resources:
             limits:
@@ -48,15 +48,15 @@ spec:
               protocol: TCP
           startupProbe:
             httpGet:
-              path: /health
+              path: /
               port: http
             periodSeconds: 10
-            failureThreshold: 30
+            failureThreshold: 60
             successThreshold: 1
             timeoutSeconds: 3
           livenessProbe:
             httpGet:
-              path: /health
+              path: /
               port: http
             periodSeconds: 3
             failureThreshold: 3
@@ -64,7 +64,7 @@ spec:
             timeoutSeconds: 3
           readinessProbe:
             httpGet:
-              path: /health
+              path: /
               port: http
             periodSeconds: 3
             failureThreshold: 3
