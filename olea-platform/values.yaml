@@ -27,10 +27,10 @@ deploymentList:
 
   nginxDemo:
     name: nginx
-    imageTag: "latest"
-    configMapName: olea
-    cpuAllocated: 200m
-    memoryAllocated: 256Mi
+    imageTag: "1.25.3"
+    # configMapName: olea
+    cpuAllocated: 250m
+    memoryAllocated: 512Mi
     containerPort: 80
     repository: docker.io
     # extraEnvs:
