@@ -8,7 +8,8 @@ fullnameOverride: ""
 commonConfig:
   environment: dev
   # useTimeStampLabel: to control whether add timestamp as label to deployment
-  useTimestampAsLabel: true
+  useTimestampAsLabel: false
+  timestamp: "1700529887"
   repository: 855703743734.dkr.ecr.ap-southeast-1.amazonaws.com/olea
   imagePullPolicy: Always
   imagePullSecrets: []
@@ -25,18 +26,6 @@ deploymentList:
   # configMapName: olea-configmap                                # is used to set configmap name for service
   # cpuAllocated: 250m                                          # is used to set cpu limits, requests for service          (Optional default 250m)
   # memoryAllocated: 1024Mi                                      # is used to set memory limits, requests for service       (Optional default 1024Mi)
-
-  nginxDemo:
-    name: nginx
-    imageTag: "1.25.3"
-    # configMapName: olea
-    cpuAllocated: "0.25"
-    memoryAllocated: 0.5Gi
-    containerPort: 80
-    repository: docker.io
-    # extraEnvs:
-    #   - name: parameter
-    #     value: -Xms1024M -Xmx1024M -Ddubbo.reference.check=false
 
 strategy:
   Rollout:

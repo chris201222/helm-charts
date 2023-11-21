@@ -18,7 +18,7 @@ spec:
         app: {{ $deployment.name }}
         environment: {{ $top.Values.commonConfig.environment }}
         {{- if $top.Values.commonConfig.useTimestampAsLabel }}
-        timestamp: {{ now | unixEpoch | quote}}
+        timestamp: {{ $top.Values.commonConfig.timestamp }}
         {{- end }}
     spec:
       serviceAccountName: {{ include "olea-platform.serviceAccountName" $top }}
