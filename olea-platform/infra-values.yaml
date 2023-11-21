@@ -32,15 +32,15 @@ ingress:
 
 scheduler:
   enabled: false
-  image: 855703743734.dkr.ecr.ap-southeast-1.amazonaws.com/olea/olea-simplescaler:v2
+  image: SCHEULER_IMAGE
   scaleInPolicy:
-    name: "olea-scheduler-daily-scale-in"
+    name: "scheduler-daily-scale-in"
     schedule: "20 15 * * 1-5"
     namespace: dev
     replicas: 0
     resourceKind: deployment # supported resource kind:  Deployment, ARGO_ROLLOUT
   scaleOutPolicy:
-    name: "olea-scheduler-daily-scale-out"
+    name: "scheduler-daily-scale-out"
     schedule: "05 1 * * 1-5"
     namespace: dev
     replicas: 1
@@ -49,9 +49,9 @@ scheduler:
 ingressRoute:
   active:
     enabled: false
-    name: olea-platform-ingress-route
-    domainName: "qa.scvolea.com"
+    name: ingress-route
+    domainName: "qa.demo.com"
   preview:
     enabled: false # Set to true to enable preview environment
     name: olea-platform-ingress-route-preview
-    domainName: "qa-preview.scvolea.com"
+    domainName: "qa-preview.demo.com"
