@@ -23,7 +23,7 @@ entries:
     version: 1.0.10
   - apiVersion: v2
     appVersion: 38.0.2
-    created: "2023-11-21T09:26:15.470874218+08:00"
+    created: "2023-11-21T09:41:25.582126726+08:00"
     description: A Helm chart for Olea Platform
     digest: 0d9ca644d4c0302cdeb9ce11b55a4af0ddae97f8d693d62a7c1d171471712bd2
     name: olea-platform
@@ -31,4 +31,4 @@ entries:
     urls:
     - https://chris201222.github.io/helm-charts/olea-platform-1.0.0.tgz
     version: 1.0.0
-generated: "2023-11-21T09:26:15.470039119+08:00"
+generated: "2023-11-21T09:41:25.581765038+08:00"
