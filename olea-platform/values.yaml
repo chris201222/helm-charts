@@ -10,7 +10,7 @@ commonConfig:
   # useTimeStampLabel: to control whether add timestamp as label to deployment
   useTimestampAsLabel: false
   timestamp: "1700529887"
-  repository: 855703743734.dkr.ecr.ap-southeast-1.amazonaws.com/olea
+  repository: YOUR_PRIVATE_REPO
   imagePullPolicy: Always
   imagePullSecrets: []
 
