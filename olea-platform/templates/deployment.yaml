@@ -47,7 +47,7 @@ spec:
               containerPort: {{ $deployment.containerPort | default 8080 }}
               protocol: TCP
           startupProbe:
-            httpGet:
+            tcpSocket:
               path: /
               port: http
             periodSeconds: 10
@@ -55,7 +55,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 3
           livenessProbe:
-            httpGet:
+            tcpSocket:
               path: /
               port: http
             periodSeconds: 3
@@ -63,7 +63,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 3
           readinessProbe:
-            httpGet:
+            tcpSocket:
               path: /
               port: http
             periodSeconds: 3
