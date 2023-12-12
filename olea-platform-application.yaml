@@ -13,7 +13,7 @@ spec:
     server: "https://kubernetes.default.svc"
   sources:
     - repoURL: "https://chris201222.github.io/helm-charts/"
-      targetRevision: 1.2.0
+      targetRevision: 1.4.0
       chart: olea-platform
       helm:
         valueFiles:

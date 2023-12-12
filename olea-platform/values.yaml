@@ -36,8 +36,8 @@ strategy:
       previewMetadata:
         labels:
           role: preview
-      autoPromotionEnabled: false
       scaleDownDelaySeconds: 60
+    autoPromotionEnabled: "false"
 
 service:
   type: ClusterIP
