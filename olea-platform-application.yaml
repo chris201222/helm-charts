@@ -17,8 +17,8 @@ spec:
       chart: olea-platform
       helm:
         valueFiles:
-          - $values/qa/values-qa.yaml
-          - $values/qa/common-qa.yaml
+          - $values/qa/values.yaml
+          - $values/qa/infra-values.yaml
     - repoURL: "git@github.com:chris201222/platform-config.git"
       targetRevision: HEAD
       ref: values
